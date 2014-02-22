@@ -56,7 +56,7 @@
 				</div>
 			</div>
 		</div>
-		<a class="eft carousel-control" href="#myCarousel" data-slide="prev">
+		<a class="left carousel-control" href="#myCarousel" data-slide="prev">
 			<span class="icon-prev"></span>
 		</a>
 		<a class="right carousel-control" href="#myCarousel" data-slide="next">
@@ -70,6 +70,17 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$(".carousel-inner").swiperight(function(){
+				$(this).parent().carousel('prev');
+			});
+			$(".carousel-inner").swipeleft(function(){
+				$(this).parent().carousel('next');
+			});
+	});
+	</script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
